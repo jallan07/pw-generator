@@ -1,0 +1,49 @@
+/* General Resets */
+html {
+    box-sizing: border-box;
+}
+
+.custom-control-label {
+    text-transform: uppercase;
+    color: #839496;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+::-webkit-input-placeholder {
+    font-size: 1.1rem!important;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 2rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+}
+
+
+/* Main container and content */
+main { 
+    margin-top: 6%;
+}
+
+.pw-generator {
+    background: rgba(255, 255, 255, 0.098);
+    margin-top: 20px;
+    padding: 50px 10px;
+}
+
+.pw-generator hr {
+    width: 35%;
+    border-top: 2px #839496 solid;
+}
+
+.pw-return {
+    width: 70%;
+    margin: 0 auto;
+}
