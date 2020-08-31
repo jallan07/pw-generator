@@ -29,22 +29,32 @@
          <section class="container">
             <section class="row">
                 <div class="col-md-3"></div>
+
+                <!-- Main pw generator area -->
                 <div class="col-md-6 mx-5 text-center pw-generator">
                     <div>
                         <h2>Generate a password:</h2>
                         <hr class="mb-4">
                     </div>
+
+                    <!-- Return area -->
                     <div class="form-group pw-return mb-4" id="return" data-children-count="1">
-                        <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Your secure password will be displayed here..."></textarea>
+                        <textarea class="form-control" id="exampleTextarea" rows="4" readonly=""></textarea>
                     </div>
+                    
+                    <!-- Toggle for Star Wars Themed Button -->
                     <div class="form-group">
                         <div class="custom-control custom-switch" data-children-count="1">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                          <input type="checkbox sw-toggle" class="custom-control-input" id="customSwitch1">
                           <label class="custom-control-label" for="customSwitch1">Use the Force, Luke</label>
                         </div>
-                    <div class="pw-button mt-4">
-                        <button type="button" class="btn btn-primary btn-lg">Create My Password</button>
+
+                    <!-- Buttons -->
+                    <div class="pw-button mt-3 d-inline-block">
+                        <button type="button" class="btn btn-primary mx-2 my-2">Create Password</button>
+                        <button type="button" class="btn btn-secondary mx-2 my-2">Copy password</button>
                     </div>
+                    
                 </div>
                 <div class="col-md-3"></div>
             </section>
