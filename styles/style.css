@@ -43,6 +43,11 @@ main {
     border-top: 2px #839496 solid;
 }
 
+.pw-generator .heading {
+    width: 70%;
+    margin: 0 auto;
+}
+
 .pw-return {
     width: 70%;
     margin: 0 auto;

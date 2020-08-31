@@ -12,6 +12,9 @@
 // Give our charSet an initial character set of lowers so that it has at least some characters to work with
         var charSet = lowers;
 
+// Set our password variable to an empty string that we will add to later
+        var password = "";
+
 // Event listener for the "Create Password" button
         runCriteria.addEventListener("click", function(){
 
@@ -33,7 +36,7 @@
             };
 
         // Create the variables for the other pieces of criteria
-            var lowersPrompt = confirm("Click OK if you would like to include lowercase letters, and CANCEL if not.");
+            // var lowersPrompt = confirm("Click OK if you would like to include lowercase letters, and CANCEL if not.");
             var uppersPrompt = confirm("Click OK if you would like to include uppercase letters, and CANCEL if not.");
             var numbersPrompt = confirm("Click OK if you would like to include numbers, and CANCEL if not.");
             var specialPrompt = confirm("Click OK if you would like to include special characters, and CANCEL if not.");
@@ -44,56 +47,56 @@
                 charSet += uppers;
                 charSet += numbers;
                 charSet += special;
-                console.log(charSet);
+                console.log(masterPasswordGenerator(pwLength, charSet));
                 return charSet;
             }
             else if (uppersPrompt === true && numbersPrompt === true && specialPrompt !== true) {
                 charSet += uppers;
                 charSet += numbers;
-                console.log(charSet);
+                console.log(masterPasswordGenerator(pwLength, charSet));
                 return charSet;
             }
             else if (uppersPrompt === true && numbersPrompt !== true && specialPrompt === true) {
                 charSet += uppers;
                 charSet += special;
-                console.log(charSet);
+                console.log(masterPasswordGenerator(pwLength, charSet));
                 return charSet;
             }
             else if (uppersPrompt === true && numbersPrompt !== true && specialPrompt !== true) {
                 charSet += uppers;
-                console.log(charSet);
+                console.log(masterPasswordGenerator(pwLength, charSet));
                 return charSet;
             }
             else if (uppersPrompt !== true && numbersPrompt === true && specialPrompt === true) {
                 charSet += numbers;
                 charSet += special;
-                console.log(charSet);
+                console.log(masterPasswordGenerator(pwLength, charSet));
                 return charSet;
             }
             else if (uppersPrompt !== true && numbersPrompt === true && specialPrompt !== true) {
                 charSet += numbers;
-                console.log(charSet);
+                console.log(masterPasswordGenerator(pwLength, charSet));
                 return charSet;
             }
             else if (uppersPrompt !== true && numbersPrompt !== true && specialPrompt === true) {
                 charSet += special;
-                console.log(charSet);
+                console.log(masterPasswordGenerator(pwLength, charSet));
                 return charSet;
             }
             else {
-                return charSet;
+                alert("You must select at least 1 character type to create a password. Please start again.")
             }
         }); 
 
 // Master generator function
             function masterPasswordGenerator(pwLength, charSet) {
-                var password = "";
                 for (i = 0; i < pwLength; i++) {
                     password += charSet.charAt(Math.floor(Math.random() * charSet.length));
                 }
                 return password;
             };
 
+            // console.log(password);
 
 
 
