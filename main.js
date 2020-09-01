@@ -1,3 +1,15 @@
+// ———————————————————————————— //
+
+    // Before reviewing the code, it's important to know that I DID NOT use the code template that was provided in the /develop folder for this project. It was an oversight on my part, and I was already in too deep before I realized the error. So I chose to move forward without it using the solution that I had created myself.
+
+    // That being said, I believe you will find that all criteria for this project have been met.
+    
+    // Enjoy!
+
+// ———————————————————————————— //
+// ———————————————————————————— //
+
+
 // Various arrays for potential characters
     var lowers = 'abcdefghijklmnopqrstuvwxyz';
     var uppers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
