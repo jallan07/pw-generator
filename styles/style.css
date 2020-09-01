@@ -53,6 +53,13 @@ main {
     margin: 0 auto;
 }
 
+.form-control {
+    font-size: 18px;
+    color: #031216;
+    text-align: center;
+    padding: 20px 10px;
+}
+
 .btn {
     text-transform: uppercase;
     font-size: 1rem;
@@ -64,6 +71,6 @@ main {
 /* Media queries */
 @media screen and (max-width: 769px) {
     main { 
-        margin-top: 25%;
+        margin-top: 15%;
     }
 }
