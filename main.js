@@ -107,18 +107,18 @@ function copyToClipboard() {
     alert("Your password has been copied to your clipboard!");
   };
 
-// Reset PW to blank
+// Function that resets the PW return area to blank
 function resetPW() {
     document.getElementById("pwResult").innerHTML = "";
 }
 
-// Change the h1 tag on click of the create password button
+// Function that changes the h1 tag on click of the "create password" button
     // Resource here: https://www.sitepoint.com/community/t/changing-h1-tag-when-link-is-clicked/111256
-  function changeMainHeading(mainHeading,newHeading){
-    var newHeading = document.getElementById(newHeading);
-    
-    newHeading.innerHTML = mainHeading; 
-  };
+function changeMainHeading(mainHeading,newHeading){
+var newHeading = document.getElementById(newHeading);
+
+newHeading.innerHTML = mainHeading; 
+};
 
 
 
