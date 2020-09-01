@@ -34,10 +34,10 @@ runCriteria.addEventListener("click", function(){
     };
 
     // Create the variables for the other pieces of criteria
-    var lowersPrompt = confirm("Click OK if you would like to include lowercase letters, and CANCEL if not.");
-    var uppersPrompt = confirm("Click OK if you would like to include uppercase letters, and CANCEL if not.");
-    var numbersPrompt = confirm("Click OK if you would like to include numbers, and CANCEL if not.");
-    var specialPrompt = confirm("Click OK if you would like to include special characters, and CANCEL if not.");
+    var lowersPrompt = confirm("Would you like LOWERCASE letters in your password? Click ok for yes, and cancel for no.");
+    var uppersPrompt = confirm("Would you like UPPERCASE letters in your password? Click ok for yes, and cancel for no.");
+    var numbersPrompt = confirm("Would you like NUMBERS in your password? Click ok for yes, and cancel for no.");
+    var specialPrompt = confirm("Would you like SPECIAL CHARACTERS in your password? Click ok for yes, and cancel for no.");
 
     // Adjust charSet based on the criteria requested by the user
 
@@ -57,6 +57,15 @@ runCriteria.addEventListener("click", function(){
         }
         break;
     };
+
+    // If character set is empty after the criteria prompts, send the user an alert
+    while (true){
+        if (charSet === "") {
+            alert("At least one character type must be selected in order to create a password. Please try again.");
+        }
+        break;
+    }
+
     console.log(masterPasswordGenerator(pwLength, charSet));
 
     // Master generator function
@@ -68,7 +77,6 @@ runCriteria.addEventListener("click", function(){
     };
     console.log(password);
     document.getElementById("pwResult").innerHTML += password;
-    // document.getElementById("mainHeading").innerHTML = "Pa$$woRd G3n3rat0r";
 
 }); 
 
