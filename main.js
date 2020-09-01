@@ -19,13 +19,16 @@ runCriteria.addEventListener("click", function(){
         // Set the pwLength variable to a number instead of a string
         var pwLength = +pwLength;
         // Run if statements to make sure the length fits in the project scope criteria
-        if (pwLength < 8){
+        if (pwLength < 8){ 
+            // If it is too short, an alert will be triggered
             alert("Passwords must be at least 8 characters in length.");
         } 
-        else if (pwLength > 128) {
+        else if (pwLength > 128) { 
+            // If it is too long, an alert will be triggered
             alert("Passwords must be no more than 128 characters in length.");
         }
-        else {
+        else { 
+            // If the input is valid, then it will break out of the while loop and move to the next prompts regarding character set
             break;
         }
     };
@@ -37,6 +40,8 @@ runCriteria.addEventListener("click", function(){
     var specialPrompt = confirm("Click OK if you would like to include special characters, and CANCEL if not.");
 
     // Adjust charSet based on the criteria requested by the user
+
+        // Originally, I had a long list of if/else statements written out here to determine the character set. But as I researched, I discovered the same thing was possible with fewer lines of code using a while() statement.
     while (true) {
         if (lowersPrompt === true){
             charSet += lowers;
@@ -68,39 +73,21 @@ runCriteria.addEventListener("click", function(){
 }); 
 
 
-
-
-
-// —————————————————————————————————————————— //
-// —————————————————————————————————————————— //
-// —————————————————————————————————————————— //
-// —————————————————————————————————————————— //
-
-
-
-// OLD Foundational Functions
-
-// // Functions for selecting random characters from the above arrays
-//         // Generates a random number
-//             function getRandomNumber() {
-//                 return numbers[Math.floor(Math.random() * numbers.length)];
-//             }
-//         // Generates a random LOWER case letter
-//             function getRandomLower(){
-//                 return letters[Math.floor(Math.random() * letters.length)].toLowerCase();
-//             }
-//         // Generate a random upper case letter
-//             function getRandomUpper(){
-//                 return letters[Math.floor(Math.random() * letters.length)].toUpperCase();
-//             }
-//         // Generate a random special character
-//             function getRandomSpecial() {
-//                 return special[Math.floor(Math.random() * special.length)];
-//             }
-//         // Generate a random star wars phrase
-//             function getRandomSW() {
-//                 return starWars[Math.floor(Math.random() * starWars.length)];
-//             }
+// Copy to clipboard function as detailed on W3Schools.com
+function copyToClipboard() {
+    /* Get the text field */
+    var copyText = document.getElementById("pwResult");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+  
+    /* Alert the copied text */
+    alert("Your password has been copied to your clipboard!");
+  }
 
 
 // FOR USE LATER:
