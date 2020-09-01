@@ -73,22 +73,34 @@ runCriteria.addEventListener("click", function(){
 }); 
 
 
-// Copy to clipboard function as detailed on W3Schools.com
+// Copy to clipboard function
+    // Resource found here: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
 function copyToClipboard() {
     /* Get the text field */
     var copyText = document.getElementById("pwResult");
-  
     /* Select the text field */
     copyText.select();
     copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  
     /* Copy the text inside the text field */
     document.execCommand("copy");
-  
     /* Alert the copied text */
     alert("Your password has been copied to your clipboard!");
-  }
+  };
+
+// Reset PW to blank
+function resetPW() {
+    document.getElementById("pwResult").innerHTML = "";
+}
+
+// Change the h1 tag on click of the create password button
+    // Resource here: https://www.sitepoint.com/community/t/changing-h1-tag-when-link-is-clicked/111256
+  function changeMainHeading(mainHeading,newHeading){
+    var newHeading = document.getElementById(newHeading);
+    
+    newHeading.innerHTML = mainHeading; 
+  };
+
 
 
 // FOR USE LATER:
-// var starWars = ["Luk3", "Skyw@Lk3r", "H@n", "S0l0", "L3ia", "J3d!", "$!th", "R3y", "Kyl*", "D*7th", "V*d3r", "Y*d@", "$!d!ous"];
+    // var starWars = ["Luk3", "Skyw@Lk3r", "H@n", "S0l0", "L3ia", "J3d!", "$!th", "R3y", "Kyl*", "D*7th", "V*d3r", "Y*d@", "$!d!ous"];
