@@ -131,8 +131,3 @@ var newHeading = document.getElementById(newHeading);
 
 newHeading.innerHTML = mainHeading; 
 };
-
-
-
-// FOR USE LATER:
-    // var starWars = ["Luk3", "Skyw@Lk3r", "H@n", "S0l0", "L3ia", "J3d!", "$!th", "R3y", "Kyl*", "D*7th", "V*d3r", "Y*d@", "$!d!ous"];
