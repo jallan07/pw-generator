@@ -25,13 +25,20 @@
 // Event listener for the "Create Password" button
 runCriteria.addEventListener("click", function(){
 
+    // Sets the default character set and default password to empty.
+    charSet = "";
+    password = "";
+
+    // Clears the password return area to make room for a new password each time the "create password" button is clicked
+    document.getElementById("pwResult").innerHTML = "";
+
     // Check to make sure the pwLength variable is set properly
     while(true) {
         var pwLength = prompt("How many characters do you want your password to be?");
         // Set the pwLength variable to a number instead of a string
         var pwLength = +pwLength;
         // Run if statements to make sure the length fits in the project scope criteria
-        if (pwLength < 8){ 
+        if (pwLength < 8) { 
             // If it is too short, an alert will be triggered
             alert("Passwords must be at least 8 characters in length.");
         } 
@@ -95,22 +102,27 @@ runCriteria.addEventListener("click", function(){
 
 // Copy to clipboard function
     // Resource found here: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
-function copyToClipboard() {
-    /* Get the text field */
-    var copyText = document.getElementById("pwResult");
-    /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-    /* Copy the text inside the text field */
-    document.execCommand("copy");
-    /* Alert the copied text */
-    alert("Your password has been copied to your clipboard!");
-  };
-
-// Function that resets the PW return area to blank
-function resetPW() {
-    document.getElementById("pwResult").innerHTML = "";
-}
+    function copyToClipboard() {
+        /* Get the text field */
+        var copyText = document.getElementById("pwResult");
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+    
+        // —————————— //
+        // Snackbar functionality to alert copied text. Resource found here: https://www.w3schools.com/howto/howto_js_snackbar.asp
+        // —————————— //
+        // Get the snackbar div
+        var x = document.getElementById("snackbar");
+        // Add the show class to div
+        x.className = "show";
+        //After 3 seconds, remove the show class from the snackbar div
+        setTimeout(function(){
+            x.className = x.className.replace("show", ""); }
+            , 3000);
+    };
 
 // Function that changes the h1 tag on click of the "create password" button
     // Resource here: https://www.sitepoint.com/community/t/changing-h1-tag-when-link-is-clicked/111256
