@@ -29,7 +29,7 @@ h2 {
 
 /* Main container and content */
 main { 
-    margin-top: 6%;
+    margin-top: 4%;
 }
 
 .pw-generator {
@@ -58,6 +58,13 @@ main {
     color: #031216;
     text-align: center;
     padding: 20px;
+}
+
+.char-count-label {
+    text-transform: uppercase;
+    color: #839496;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
 }
 
 .btn {
@@ -121,6 +128,10 @@ Snackbar functionality to alert copied text. Resource found here: https://www.w3
 /* Media queries */
 @media screen and (max-width: 769px) {
     main { 
-        margin-top: 15%;
+        margin-top: 5%;
+    }
+    #snackbar {
+        right: 5%;
+        bottom: 3%;
     }
 }

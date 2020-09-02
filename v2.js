@@ -9,7 +9,6 @@
 // ———————————————————————————— //
 // ———————————————————————————— //
 
-
 // Various arrays for potential characters
 var lowers = 'abcdefghijklmnopqrstuvwxyz';
 var uppers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -21,6 +20,9 @@ var charSet = "";
 
 // Set default password to empty — my function will fill it in later
 var password = "";
+
+// Initialize the variable for the length input
+var lengthEl = document.getElementById("inputLength");
 
 // Event listener for the "Create Password" button
 runCriteria.addEventListener("click", function(){
@@ -35,15 +37,15 @@ document.getElementById("pwResult").innerHTML = "";
 
 // Check to make sure the pwLength variable is set properly
 while(true) {
-    var pwLength = prompt("How many characters do you want your password to be?");
+    var length = lengthEl.value;
     // Set the pwLength variable to a number instead of a string
-    var pwLength = +pwLength;
+    length = +length;
     // Run if statements to make sure the length fits in the project scope criteria
-    if (pwLength < 8) { 
+    if (length < 8) { 
         // If it is too short, an alert will be triggered
         alert("Passwords must be at least 8 characters in length.");
     } 
-    else if (pwLength > 128) { 
+    else if (length > 128) { 
         // If it is too long, an alert will be triggered
         alert("Passwords must be no more than 128 characters in length.");
     }
@@ -86,11 +88,11 @@ while (true){
     break;
 }
 
-console.log(masterPasswordGenerator(pwLength, charSet));
+console.log(masterPasswordGenerator(length, charSet));
 
 // Master generator function
-function masterPasswordGenerator(pwLength, charSet) {
-    for (i = 0; i < pwLength; i++) {
+function masterPasswordGenerator(length, charSet) {
+    for (i = 0; i < length; i++) {
         password += charSet.charAt(Math.floor(Math.random() * charSet.length));
     }
     return password;
