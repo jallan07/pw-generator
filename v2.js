@@ -44,10 +44,12 @@ while(true) {
     if (length < 8) { 
         // If it is too short, an alert will be triggered
         alert("Passwords must be at least 8 characters in length.");
+        return;
     } 
     else if (length > 128) { 
         // If it is too long, an alert will be triggered
         alert("Passwords must be no more than 128 characters in length.");
+        return;
     }
     else { 
         // If the input is valid, then it will break out of the while loop and move to the next prompts regarding character set
