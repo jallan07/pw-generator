@@ -24,6 +24,8 @@
 
 // Event listener for the "Create Password" button
 runCriteria.addEventListener("click", function(){
+    
+    genPW();
 
     // Sets the default character set and default password to empty.
     charSet = "";
@@ -31,10 +33,18 @@ runCriteria.addEventListener("click", function(){
 
     // Clears the password return area to make room for a new password each time the "create password" button is clicked
     document.getElementById("pwResult").innerHTML = "";
+});
 
     // Check to make sure the pwLength variable is set properly
-    while(true) {
+    // while(true) 
+    function genPW() {
         var pwLength = prompt("How many characters do you want your password to be?");
+
+        if (!pwLength) {
+            // window.location.reload();
+            return;
+        }
+        
         // Set the pwLength variable to a number instead of a string
         var pwLength = +pwLength;
         // Run if statements to make sure the length fits in the project scope criteria
@@ -46,19 +56,18 @@ runCriteria.addEventListener("click", function(){
             // If it is too long, an alert will be triggered
             alert("Passwords must be no more than 128 characters in length.");
         }
-        else { 
-            // If the input is valid, then it will break out of the while loop and move to the next prompts regarding character set
-            break;
-        }
-    };
+        // else { 
+        //     // If the input is valid, then it will break out of the while loop and move to the next prompts regarding character set
+        //     break;
+        // }
 
-    // Create the variables for the other pieces of criteria
-    var lowersPrompt = confirm("Would you like LOWERCASE letters in your password? Click ok for yes, and cancel for no.");
-    var uppersPrompt = confirm("Would you like UPPERCASE letters in your password? Click ok for yes, and cancel for no.");
-    var numbersPrompt = confirm("Would you like NUMBERS in your password? Click ok for yes, and cancel for no.");
-    var specialPrompt = confirm("Would you like SPECIAL CHARACTERS in your password? Click ok for yes, and cancel for no.");
+        // Create the variables for the other pieces of criteria
+        var lowersPrompt = confirm("Would you like LOWERCASE letters in your password? Click ok for yes, and cancel for no.");
+        var uppersPrompt = confirm("Would you like UPPERCASE letters in your password? Click ok for yes, and cancel for no.");
+        var numbersPrompt = confirm("Would you like NUMBERS in your password? Click ok for yes, and cancel for no.");
+        var specialPrompt = confirm("Would you like SPECIAL CHARACTERS in your password? Click ok for yes, and cancel for no.");
 
-    // Adjust charSet based on the criteria requested by the user
+            // Adjust charSet based on the criteria requested by the user
 
         // Originally, I had a long list of if/else statements written out here to determine the character set. But as I researched, I discovered the same thing was possible with fewer lines of code using a while() statement.
     while (true) {
@@ -85,7 +94,8 @@ runCriteria.addEventListener("click", function(){
         break;
     }
 
-    console.log(masterPasswordGenerator(pwLength, charSet));
+    // console.log(masterPasswordGenerator(pwLength, charSet));
+    document.getElementById("pwResult").value = masterPasswordGenerator(pwLength, charSet);
 
     // Master generator function
     function masterPasswordGenerator(pwLength, charSet) {
@@ -97,8 +107,7 @@ runCriteria.addEventListener("click", function(){
     console.log(password);
     document.getElementById("pwResult").innerHTML += password;
 
-}); 
-
+    };
 
 // Copy to clipboard function
     // Resource found here: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
@@ -111,6 +120,7 @@ runCriteria.addEventListener("click", function(){
         /* Copy the text inside the text field */
         document.execCommand("copy");
     
+        
         // —————————— //
         // Snackbar functionality to alert copied text. Resource found here: https://www.w3schools.com/howto/howto_js_snackbar.asp
         // —————————— //
