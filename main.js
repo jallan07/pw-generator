@@ -39,12 +39,12 @@ runCriteria.addEventListener("click", function(){
     // while(true) 
     function genPW() {
         var pwLength = prompt("How many characters do you want your password to be?");
-
+        
         if (!pwLength) {
             // window.location.reload();
             return;
         }
-        
+
         // Set the pwLength variable to a number instead of a string
         var pwLength = +pwLength;
         // Run if statements to make sure the length fits in the project scope criteria

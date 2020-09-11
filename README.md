@@ -30,3 +30,9 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
+
+## Screenshots
+
+![PW Generator v1](img/pw-generator.png)
+
+![PW Generator - Copied PW - v1](img/pw-copied.png)
