@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Melanie Created to Test API Pulls</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--Melanie created this html to text API Pulls-->
+        <div id="dz-root"></div>
+
+
+        <!--JQuery Library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--testing js-->
+        <script type="text/javascript">
+          //In future state this would be based on geolocation of the user
+          var location1 = "Pariser Platz, 10117 Berlin, Germany";
+          //end will be based in using the getProfile function
+          function locationData(end){
+            var start = location1;  //from userLocal()
+            var end = "Maulbeerallee, 14469 Potsdam, Germany";  //this will be removed and replaced with the location based on profile data
+            var APIkey = "AIzaSyBvxteS-wirlxIYnsck8jJXEn7JB3JLdR0";
+            //remove https://cors-anywhere url when we put it in the master
+            var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + start + "&destinations=" + end + "&key=" + APIkey;
+            $.ajax({
+              url: queryURL,
+              method: "GET"
+            }).then(function(response) {
+              var distance = response.rows[0].elements[0].distance.text;
+              //pass distance on to create card
+              console.log(distance);
+            })
+          }
+          locationData();
+          
+        </script>
+      
+      </body>
+</html>
