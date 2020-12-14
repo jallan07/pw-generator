@@ -1,0 +1,21 @@
+{
+	"name": "note-taker",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"engines": {
+		"node": "12.11.1"
+	},
+	"scripts": {
+		"start": "node server.js",
+		"watch": "nodemon server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.1",
+		"fs": "0.0.1-security",
+		"nodemon": "^2.0.6",
+		"shortid": "^2.2.16"
+	}
+}

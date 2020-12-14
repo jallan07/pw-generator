@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Saved Notes | Nexus</title>
+		<link
+			rel="stylesheet"
+			href="https://bootswatch.com/4/pulse/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+			integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+			crossorigin="anonymous"
+		/>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="./assets/img/nexus-favicon.jpeg" />
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Animate on Scroll Library -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- Custom Styles -->
+		<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar navbar-dark">
+				<a class="navbar-brand" href="/">Nexus</a>
+				<div class="icons">
+					<i class="fas fa-save text-light save-note"></i>
+					<i class="fas fa-pen text-light new-note"></i>
+				</div>
+			</nav>
+		</header>
+		<div class="container-fluid">
+			<div class="row" data-aos="fade" data-aos-duration="2000">
+				<div class="col-5 list-container">
+					<div class="card">
+						<ul class="list-group"></ul>
+					</div>
+				</div>
+				<div class="col-7">
+					<input
+						class="note-title"
+						placeholder="Note Title"
+						maxlength="28"
+						type="text"
+					/>
+					<hr class="ruler" />
+					<textarea
+						class="note-textarea"
+						placeholder="Note details..."
+					></textarea>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="/assets/js/index.js"></script>
+	</body>
+</html>

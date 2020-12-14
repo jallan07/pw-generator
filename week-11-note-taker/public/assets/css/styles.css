@@ -1,0 +1,180 @@
+/* Main elements */
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+	font-family: "Oxygen", sans-serif;
+}
+
+h4 {
+	width: 70%;
+	margin: 0 auto;
+	font-weight: 400;
+}
+
+/* Header and Nav */
+header {
+	background: #5c415d;
+}
+
+nav {
+	background: #5c415d;
+	width: 80%;
+	margin: 0 auto;
+	font-family: "Oxygen", sans-serif;
+}
+
+.navbar-brand {
+	font-size: 36px;
+	letter-spacing: 20px;
+}
+
+/* Note Styling */
+.save-note {
+	display: none;
+}
+
+.icons i {
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.note-textarea,
+.note-title {
+	color: #000000;
+	width: 100%;
+	outline: none;
+	border: none;
+}
+
+.note-textarea {
+	resize: none;
+	height: calc(100% - 63px);
+	padding-top: 15px;
+}
+
+.note-title {
+	height: 80px;
+	margin-top: 13px;
+	font-size: 3rem;
+}
+
+.note-title:read-only,
+.note-textarea:read-only {
+	color: #757575;
+}
+
+.list-container .card {
+	height: calc(100vh - 70px);
+	border-bottom: none;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.list-container {
+	padding-left: 0;
+}
+
+.list-container .list-group,
+.list-container .list-group-item:first-child,
+.list-container .card {
+	border-top: none;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.list-container i {
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.list-container .list-group-item {
+	background-color: #f55d3e;
+	border-left: none;
+	border-right: none;
+	padding: 20px;
+	cursor: pointer;
+}
+
+input,
+textarea {
+	background: #ffffff;
+}
+
+/* Button styling */
+.btn-main {
+	background-color: #537d8d;
+	color: #fff;
+}
+/* Sweep to Right Hover Effect */
+
+.hvr-sweep-to-right {
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+		0 100px 80px rgba(0, 0, 0, 0.07);
+	/* Code from https://github.com/IanLunn/Hover */
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+	/* Code from https://github.com/IanLunn/Hover */
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #5c415d;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+	color: white;
+}
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+/* Responsive styling */
+@media screen and (max-width: 769px) {
+	h1 {
+		font-size: 24px;
+	}
+	h4 {
+		width: 85%;
+	}
+	.note-title {
+		font-size: 1.6rem;
+	}
+}
