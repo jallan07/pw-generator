@@ -1,0 +1,33 @@
+{
+  "name": "mongoose_skeleton",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "dev": "nodemon server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.7",
+    "morgan": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jallan07/fitness-app.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/jallan07/fitness-app/issues"
+  },
+  "homepage": "https://github.com/jallan07/fitness-app#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
